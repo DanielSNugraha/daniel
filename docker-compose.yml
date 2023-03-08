@@ -7,5 +7,31 @@ services:
       - 3000:3000
       - 3001:3001
     volumes:
-    - .:/code
-    - /code/node_modules
+      - .:/code
+      - /code/node_modules
+
+  daniel_db:
+    image: mysql:5.7
+    container_name: coconut_database
+    restart: unless-stopped
+    ports:
+      - 3396:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: daniel2
+      MYSQL_PASSWORD: password
+      MYSQL_USER: root
+    volumes:
+      - ./daniel-mysql:/var/lib/mysql/
+
+  php-apache-environment:
+    container_name: php-apache
+    build:
+      context: ./php
+      dockerfile: Dockerfile
+      depends_on:
+        - daniel_db
+      volumes:
+        - ./php/src:/var/www/html/
+      ports:
+        - 8000:80
