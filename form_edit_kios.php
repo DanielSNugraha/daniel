@@ -47,13 +47,19 @@ foreach($select as $s){
               <!-- form start -->
               <form method="post" action="controller/update_kios.php">
                 <div class="card-body">
-                 <div class="form-group">
-                    <label for="exampleInputEmail1">Nama Kios</label>
-                    <input type="text" readonly style="width: 200px;" value="<?= $nama;?>" name="nama" class="form-control" id="exampleInputEmail1" placeholder="Kode Kios">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Ukuran Kios</label>
-                    <input type="text" style="width: 200px;" name="ukuran" value="<?= $ukuran;?>" class="form-control" id="exampleInputEmail1" placeholder="Ukuran (m)">
+                  <div class="row">
+                    <div class="col-sm">
+                      <div class="form-group">
+                          <label for="exampleInputEmail1">Nama Kios</label>
+                          <input type="text" readonly style="width: 200px;" value="<?= $nama;?>" name="nama" class="form-control" id="exampleInputEmail1" placeholder="Kode Kios">
+                          </br>
+                          <label for="exampleInputEmail1">Ukuran Kios</label>
+                          <input type="text" style="width: 200px;" name="ukuran" value="<?= $ukuran;?>" class="form-control" id="exampleInputEmail1" placeholder="Ukuran (m)">
+                       </div>
+                    </div>
+                    <div class="col-sm">
+
+                    </div>
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Harga Kios</label>

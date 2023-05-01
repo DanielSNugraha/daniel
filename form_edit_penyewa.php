@@ -42,21 +42,28 @@ foreach ($select as $sel) {
     </div><!-- /.container-fluid -->
   </section>
 
-
-
   <section class="content">
     <div class="container-fluid">
       <div class="row">
         <!-- left column -->
-        <div class="col-6">
+        <div class="col">
           <!-- general form elements -->
           <div class="card card-primary">
-            <div class="card-header">
-              <h3 class="card-title">Form Input Penyewa</h3>
-            </div>
             <!-- /.card-header -->
             <!-- form start -->
             <form action="controller/update_penyewa.php" method="post">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-sm">
+
+                  </div>
+                  <div class="col-sm">
+
+                  </div>
+              </div>
+              <div class="card-footer">
+
+              </div>
               <div class="form-group">
                 <input type="text" value="<?= $nik; ?> " style="width: 300px;" name="nik" class="form-control" placeholder="NIK">
 

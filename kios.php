@@ -189,8 +189,6 @@ if(!empty($selectSewa)){
 
 <div class="card">
               <div class="card-header border-0">
-                <h3 class="card-title">DATA KIOS</h3>
-                <br></br>
                 
                 <!-- <div class="card-tools">
                   <a href="#" class="btn btn-tool btn-sm">
@@ -230,7 +228,7 @@ if(!empty($selectSewa)){
                       <?php } ?>
                       <?php if($idst<>'1' && $idst<>'2' && isset($id_sewa)){?>
                         
-                        <a onclick="return confirm('Apakah anda yakin hapus data?')" href="controller/batal_sewa.php?id=<?= $id;?>" class="btn btn-danger"><i class="fa fa-times"></i></a>
+                        <a onclick="return confirm('Apakah anda yakin hapus data?')" href="controller/batal_sewa.php?id=<?= $id;?>" class="btn btn-danger"><i class="fa fa-times"></i> Delete</a>
                         <?php }  ?>
                       </td>
                    

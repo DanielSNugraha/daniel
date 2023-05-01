@@ -37,38 +37,39 @@ foreach($select as $s){
           <div class="col">
             <!-- general form elements -->
             <div class="card card-primary">
-              <div class="card-header">
-                <h3 class="card-title">Form Input MALL</h3>
-              </div>
               <!-- /.card-header -->
               <!-- form start -->
               <form method="post" action="controller/update_mall.php" enctype="multipart/form-data">
                 <div class="card-body">
-                 <div class="form-group">
-                    <label for="exampleInputEmail1">Nama Mall</label>
-                    <input type="text" name="nama" class="form-control" id="exampleInputEmail1" style="width:300px" value="<?= $nama;?>" placeholder="Nama Mall">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Alamat Mall</label>
-                    <textarea type="text" name="alamat" class="form-control" style="width:300px" id="exampleInputEmail1" value="<?= $alamat;?>" placeholder="Alamar Lengkap"><?= $alamat;?></textarea>
-                  </div>
-                  
-                  
                   <div class="form-group">
                     <label for="exampleInputEmail1">Peta Kios</label>
                     <br></br>
-                    <img src="assets/img/<?= $peta;?>" width="200" height="200"></img>
+                    <img class="mx-auto d-block" src="assets/img/<?= $peta;?>" width="60%" height="100%"></img>
+      
+                    <input type="file" name="map" class="form-control" id="exampleInputEmail1" placeholder="Peta Kios">
 
-                    <input type="file" style="width:300px" name="map" class="form-control" id="exampleInputEmail1" placeholder="Peta Kios">
+                    <input type="hidden" name="id" class="form-control" id="exampleInputEmail1" value="<?= $id_mall;?>" >
+                    <input type="hidden" name="peta_kios" class="form-control" id="exampleInputEmail1" value="<?= $peta;?>" >
                   </div>
-
-                  <input type="hidden" name="id" class="form-control" id="exampleInputEmail1" value="<?= $id_mall;?>" >
-                  <input type="hidden" name="peta_kios" class="form-control" id="exampleInputEmail1" value="<?= $peta;?>" >
+                  <div class="row">
+                        <div class="col-sm">
+                          <div class="form-group">
+                             <label for="exampleInputEmail1">Nama Mall</label>
+                             <input type="text" name="nama" class="form-control" id="exampleInputEmail1" value="<?= $nama;?>" placeholder="Nama Mall">
+                           </div>
+                        </div>
+                        <div class="col-sm">
+                          <div class="form-group">
+                              <label for="exampleInputEmail1">Alamat Mall</label>
+                              <textarea type="text" name="alamat" class="form-control" id="exampleInputEmail1" value="<?= $alamat;?>" placeholder="Alamar Lengkap"><?= $alamat;?></textarea>
+                          </div>
+                        </div>
+                  </div>
                 </div>
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary btn-block">Submit</button>
                 </div>
               </form>
             </div>

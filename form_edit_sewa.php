@@ -24,7 +24,7 @@ foreach($select as $s){
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Form Input KIOS</h1>
+            <h1>Form Edit Sewa</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -45,40 +45,40 @@ foreach($select as $s){
           <div class="col">
             <!-- general form elements -->
             <div class="card card-primary">
-              <div class="card-header">
+              <!-- <div class="card-header">
                 <h3 class="card-title">Form Edit Kios</h3>
-              </div>
+              </div> -->
               <!-- /.card-header -->
               <!-- form start -->
               <form method="post" action="controller/update_sewa.php">
                 <div class="card-body">
-                 <div class="form-group">
-                    <label for="exampleInputEmail1">Nama Kios</label>
-                    <input type="text" readonly value="<?= $kios;?>" name="kios" style="width:200px" class="form-control" id="exampleInputEmail1" placeholder="Kode Kios">
+                <div class="row">
+                    <div class="col-sm">
+                      <div class="form-group">
+                         <label for="exampleInputEmail1">Nama Kios</label>
+                         <input type="text" readonly value="<?= $kios;?>" name="kios" class="form-control" id="exampleInputEmail1" placeholder="Kode Kios">
+                        </br>
+                        <label for="exampleInputEmail1">Nama Penyewa</label>
+                        <input type="text" readonly name="penyewa" value="<?= $penyewa;?>" class="form-control" id="exampleInputEmail1" placeholder="Nama Penyewa">
+                        </br>
+                        <input type="hidden" name="id" value="<?= $id_sewa;?>" class="form-control" id="exampleInputEmail1" placeholder="Ukuran (m)">
+                      </div>
+                    </div>
+                    <div class="col-sm">
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Tanggal Awal Sewa</label>
+                        <input type="date" value="<?=$awal;?>" name="awal" class="form-control" id="exampleInputEmail1" placeholder="Awal Sewa">
+                        </br>
+                        <label for="exampleInputEmail1">Tanggal Akhir Sewa</label>
+                        <input type="date" value="<?=$akhir;?>" name="akhir" class="form-control" id="exampleInputEmail1" placeholder="Akhir Sewa">
+                      </div>
+                    </div>
                   </div>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Nama Penyewa</label>
-                    <input type="text" readonly name="penyewa" value="<?= $penyewa;?>" style="width:200px" class="form-control" id="exampleInputEmail1" placeholder="Nama Penyewa">
-                  </div>
-
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Tanggal Awal Sewa</label>
-                    <input type="date" value="<?=$awal;?>" name="awal" class="form-control" style="width:200px" id="exampleInputEmail1" placeholder="Awal Sewa">
-                  </div>
-
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Tanggal Akhir Sewa</label>
-                    <input type="date" value="<?=$akhir;?>" name="akhir" class="form-control" style="width:200px" id="exampleInputEmail1" placeholder="Akhir Sewa">
-                  </div>
-
-                  <input type="hidden" name="id" value="<?= $id_sewa;?>" class="form-control" id="exampleInputEmail1" placeholder="Ukuran (m)">
-                  
-                  
                 </div>
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary btn-block">Submit</button>
                 </div>
               </form>
             </div>

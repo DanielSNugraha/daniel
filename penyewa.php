@@ -31,11 +31,9 @@ $select = mysqli_query($conn, "SELECT * FROM penyewa");
 
 <div class="card">
               <div class="card-header border-0">
-                <h3 class="card-title">DATA PENYEWA</h3>
-                <br></br>
-                <a href="form_insert_penyewa.php" class="btn btn-primary">Tambah Data</a>
-                
-               
+                <div class="float-right">
+                  <a href="form_insert_penyewa.php" class="btn btn-primary"><b>+ Tambah Data</b></a>
+                </div> 
               </div>
               
               <div class="card-body table-responsive p-0">
@@ -63,8 +61,8 @@ $select = mysqli_query($conn, "SELECT * FROM penyewa");
                     <td><?= $sel['email_penyewa'];?></td>
                     <td><?= $sel['no_hp_penyewa'];?></td>
                     <td>
-                        <a href="form_edit_penyewa.php?id=<?= $id;?>" class="btn btn-primary"><i class="fa fa-edit"></i></a>
-                        <a onclick="return confirm('Apakah anda yakin hapus data?')" href="controller/delete_penyewa.php?id=<?= $id;?>" class="btn btn-primary"><i class="fa fa-trash"></i></a>
+                        <a href="form_edit_penyewa.php?id=<?= $id;?>" class="btn btn-primary"><i class="fa fa-edit"></i> Edit</a>
+                        <a onclick="return confirm('Apakah anda yakin hapus data?')" href="controller/delete_penyewa.php?id=<?= $id;?>" class="btn btn-danger"><i class="fa fa-trash"></i> Delete</a>
                     </td>
                    
                   </tr>

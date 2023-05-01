@@ -35,10 +35,10 @@ INNER JOIN penyewa ON penyewa.id_penyewa=sewa.id_penyewa");
 
 <div class="card">
               <div class="card-header border-0">
-                <h3 class="card-title">DATA SEWA</h3>
-                <br></br>
+                <!-- <h3 class="card-title">DATA SEWA</h3> -->
+                <!-- <br></br>
                 
-                
+                 -->
               </div>
               
               <div class="card-body table-responsive p-0">
@@ -48,9 +48,9 @@ INNER JOIN penyewa ON penyewa.id_penyewa=sewa.id_penyewa");
                     <th>Nama Kios</th>
                     <th>Nama Penyewa</th>
                     
-                    <th>tanggal awal sewa</th>
-                    <th>tanggal akhir sewa</th>
-                    <th>status</th>
+                    <th>Tanggal Awal Sewa</th>
+                    <th>Tanggal Akhir Sewa</th>
+                    <th>Status Sewa</th>
                     <th>Aksi</th>
                   </tr>
                   </thead>
@@ -62,15 +62,15 @@ INNER JOIN penyewa ON penyewa.id_penyewa=sewa.id_penyewa");
                             $idst = $sel['id_status'];
 
                             if($idst==1){
-                              $status = "SEWA TIDAK AKTIF";
+                              $status = "<p class='text-secondary text-bold pt-2'>SEWA TIDAK AKTIF</p>";
                             }
 
                             if($idst==2){
-                              $status = "SEWA AKTIF";
+                              $status = "<p class='text-success text-bold pt-2'>SEWA AKTIF</p>";
                             }
 
                             if($idst==3){
-                              $status = "BOOKING";
+                              $status = "<p class='text-primary text-bold pt-2'>BOOKING</p>";
                             }
                     ?>
                     <td><?= $sel['nama_kios'];?></td>
@@ -80,8 +80,8 @@ INNER JOIN penyewa ON penyewa.id_penyewa=sewa.id_penyewa");
                     <td><?= $sel['tgl_akhir_sewa'];?></td>
                     <td><?= $status?></td>
                     <td>
-                        <a href="form_edit_sewa.php?id=<?= $id;?>" class="btn btn-primary"><i class="fa fa-edit"></i></a>
-                        <a onclick="return confirm('Apakah anda yakin hapus data?')" href="controller/delete_sewa.php?id=<?= $id;?>" class="btn btn-primary"><i class="fa fa-trash"></i></a>
+                        <a href="form_edit_sewa.php?id=<?= $id;?>" class="btn btn-primary"><i class="fa fa-edit"></i> Edit</a>
+                        <a onclick="return confirm('Apakah anda yakin hapus data?')" href="controller/delete_sewa.php?id=<?= $id;?>" class="btn btn-danger"><i class="fa fa-trash"></i> Delete</a>
                     </td>
                    
                   </tr>
@@ -155,8 +155,8 @@ INNER JOIN penyewa ON penyewa.id_penyewa=sewa.id_penyewa");
                     <th>Nama Kios</th>
                     <th>Nama Penyewa</th>
                     
-                    <th>tanggal awal sewa</th>
-                    <th>tanggal akhir sewa</th>
+                    <th>Tanggal Awal Sewa</th>
+                    <th>Tanggal Akhir Sewa</th>
                     <th>Status Sewa</th>
                     
                   </tr>

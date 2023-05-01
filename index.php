@@ -31,7 +31,7 @@ if(isset($_GET['login'])){
           
         <?php } ?>
     
-    <img src="assets/img/layer 1.png" width="200" height="100"></img>
+    <img src="assets/img/layer-1.png" width="200" height="100"></img>
   </div>
   <!-- /.login-logo -->
   <div class="card">

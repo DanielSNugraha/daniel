@@ -68,11 +68,11 @@ if(isset($_SESSION['eo'])){
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
       <!-- Navbar Search -->
-      <li class="nav-item">
-        <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+      <!-- <li class="nav-item"> -->
+        <!-- <a class="nav-link" data-widget="navbar-search" href="#" role="button">
           <i class="fas fa-search"></i>
-        </a>
-        <div class="navbar-search-block">
+        </a> -->
+        <!-- <div class="navbar-search-block">
           <form class="form-inline">
             <div class="input-group input-group-sm">
               <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
@@ -86,8 +86,8 @@ if(isset($_SESSION['eo'])){
               </div>
             </div>
           </form>
-        </div>
-      </li>
+        </div> -->
+      <!-- </li> -->
 
       
       <!-- Notifications Dropdown Menu -->
@@ -97,6 +97,13 @@ if(isset($_SESSION['eo'])){
           <i class="fas fa-expand-arrows-alt"></i>
         </a>
       </li>
+      <li class="nav-item">
+        <!-- <a class="nav-link">Logout</a> -->
+        <a href="controller/logout.php" class="nav-link text-danger text-bold">
+          <i class="nav-icon fas fa-sign-out-alt"></i> Logout
+        </a>
+      </li>
+
       
     </ul>
   </nav>
@@ -129,7 +136,7 @@ if(isset($_SESSION['eo'])){
           
           <li class="nav-item">
             <a href="sewa.php" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+              <i class="nav-icon fas fa-list-alt"></i>
               <p>
                 Sewa
                 
@@ -139,7 +146,7 @@ if(isset($_SESSION['eo'])){
 
           <li class="nav-item">
             <a href="mall.php" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+              <i class="nav-icon fas fa-building"></i>
               <p>
                 Mall
                 
@@ -149,7 +156,7 @@ if(isset($_SESSION['eo'])){
 
           <li class="nav-item">
             <a href="eo.php" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+              <i class="nav-icon fas fa-user-tie"></i>
               <p>
                 Event Organizer
                 
@@ -159,7 +166,7 @@ if(isset($_SESSION['eo'])){
 
           <li class="nav-item">
             <a href="penyewa.php" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+              <i class="nav-icon fas fa-users"></i>
               <p>
                Data Penyewa
                 
@@ -167,24 +174,13 @@ if(isset($_SESSION['eo'])){
             </a>
           </li>
 
-          
-
-          <li class="nav-item">
-            <a href="controller/logout.php" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
-              <p>
-                Logout
-                
-              </p>
-            </a>
-          </li>
           <?php } ?>
           
           <?php if(isset($id_penyewa)){?>
           
           <li class="nav-item">
             <a href="mall.php" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+              <i class="nav-icon fas fa-building"></i>
               <p>
                 Kios
                 
@@ -194,7 +190,7 @@ if(isset($_SESSION['eo'])){
 
           <li class="nav-item">
             <a href="pembayaran.php" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+              <i class="nav-icon fas fa-money-bill"></i>
               <p>
                 Pembayaran
                 
@@ -204,7 +200,7 @@ if(isset($_SESSION['eo'])){
           
           <li class="nav-item">
             <a href="sewa.php" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+              <i class="nav-icon fas fa-history"></i>
               <p>
                Riwayat Sewa
                 
@@ -214,7 +210,7 @@ if(isset($_SESSION['eo'])){
 
           <li class="nav-item">
             <a href="form_edit_penyewa.php?id=<?=$id_penyewa?>" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+              <i class="nav-icon fas fa-user"></i>
               <p>
                Profil
                 
@@ -222,15 +218,6 @@ if(isset($_SESSION['eo'])){
             </a>
           </li>
 
-          <li class="nav-item">
-            <a href="controller/logout.php" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
-              <p>
-                Logout
-                
-              </p>
-            </a>
-          </li>
           <?php } ?>
 
           <?php if(isset($id_eo)){?>
@@ -238,7 +225,7 @@ if(isset($_SESSION['eo'])){
           
           <li class="nav-item">
             <a href="sewa.php" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+              <i class="nav-icon fas fa-list-alt"></i>
               <p>
                 Sewa
                 
@@ -246,15 +233,6 @@ if(isset($_SESSION['eo'])){
             </a>
           </li>
 
-          <li class="nav-item">
-            <a href="controller/logout.php" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
-              <p>
-                Logout
-                
-              </p>
-            </a>
-          </li>
           <?php } ?>
           
           

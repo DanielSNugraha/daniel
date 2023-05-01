@@ -65,7 +65,7 @@ INNER JOIN penyewa ON penyewa.id_penyewa=sewa.id_penyewa");
                         }
 
                         if ($idst == 2) {
-                          $status = "SEWA AKTIF";
+                          $status = "<p class='text-success text-bold pt-2'>SEWA AKTIF</p>";
                         }
 
                         if ($idst == 3) {
@@ -134,8 +134,6 @@ INNER JOIN penyewa ON penyewa.id_penyewa=sewa.id_penyewa");
 
               <div class="card">
                 <div class="card-header border-0">
-                  <h3 class="card-title">DATA SEWA</h3>
-                  <br></br>
 
                   <!-- <div class="card-tools">
                   <a href="#" class="btn btn-tool btn-sm">
@@ -162,31 +160,36 @@ INNER JOIN penyewa ON penyewa.id_penyewa=sewa.id_penyewa");
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <?php
-                        foreach ($select as $sel) {
-                          $id = $sel['id_sewa'];
-                          $idst = $sel['id_status'];
-                          if ($idst == 2) {
-                            $status = "SEWA AKTIF";
-                          }
+                    <tr>
+                    <?php
+                    foreach ($select as $sel) {
+                      $id = $sel['id_sewa'];
+                      $idst = $sel['id_status'];
+                      if ($idst == 2) {
+                        $status = "<p class='text-success text-bold pt-2'>SEWA AKTIF</p>";
+                        $disabled = "disabled";
+                        $btn_class = "btn-secondary"; // add this line to set the button class to btn-secondary
+                        $btn_text = "Terbayar"; // add this line to set the button text to "terbayar"
+                        $link = "#";
+                      } else {
+                        $status = "<p class='text-primary text-bold pt-2'>BOOKING</p>";
+                        $disabled = "";
+                        $btn_class = "btn-primary"; // add this line to set the button class to btn-primary
+                        $btn_text = "Pembayaran"; // add this line to set the button text to "pembayaran"
+                        $link = "form_insert_pembayaran.php?id=" . $id;
+                      }
+                    ?>
+                      <td><?= $sel['nama_kios']; ?></td>
+                      <td><?= $sel['nama_penyewa']; ?></td>
 
-                          if ($idst == 3) {
-                            $status = "BOOKING";
-                          }
-                        ?>
-                          <td><?= $sel['nama_kios']; ?></td>
-                          <td><?= $sel['nama_penyewa']; ?></td>
+                      <td><?= $sel['tgl_awal_sewa']; ?></td>
+                      <td><?= $sel['tgl_akhir_sewa']; ?></td>
+                      <td><?= $status; ?>
+                      <td>
+                        <a href="<?= $link; ?>" class="btn <?= $btn_class; ?>" <?= $disabled; ?>><?= $btn_text; ?></a> <!-- modify this line to set the button class and text -->
+                      </td>
+                    </tr>
 
-                          <td><?= $sel['tgl_awal_sewa']; ?></td>
-                          <td><?= $sel['tgl_akhir_sewa']; ?></td>
-                          <td><?= $status; ?>
-                          <td>
-                            <a href="form_insert_pembayaran.php?id=<?= $id; ?>" class="btn btn-primary">pembayaran</th>
-                          </td>
-
-
-                      </tr>
                     <?php } ?>
                     </tbody>
                   </table>
@@ -271,7 +274,7 @@ INNER JOIN penyewa ON penyewa.id_penyewa=sewa.id_penyewa");
                             $id = $sel['id_sewa'];
                             $idst = $sel['id_status'];
                             if ($idst == 2) {
-                              $status = "SEWA AKTIF";
+                              $status = "<p class='text-success text-bold pt-2'>SEWA AKTIF</p>";
                             }
 
                             if ($idst == 3) {

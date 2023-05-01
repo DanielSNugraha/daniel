@@ -29,11 +29,9 @@ $select = mysqli_query($conn, "SELECT * FROM eo");
 
 <div class="card">
               <div class="card-header border-0">
-                <h3 class="card-title">DATA EO</h3>
-                <br></br>
-                <a href="form_insert_eo.php" class="btn btn-primary">Tambah Data</a>
-                
-                
+                <div class="float-right">
+                  <a href="form_insert_eo.php" class="btn btn-primary"><b>+ Tambah Data</b></a>
+                </div> 
               </div>
               
               <div class="card-body table-responsive p-0">
@@ -56,8 +54,8 @@ $select = mysqli_query($conn, "SELECT * FROM eo");
                     <td><?= $sel['email_eo'];?></td>
                     <td><?= $sel['no_hp_eo'];?></td>
                     <td>
-                        <a href="form_edit_eo.php?id=<?= $id;?>" class="btn btn-primary"><i class="fa fa-edit"></i></a>
-                        <a onclick="return confirm('Apakah anda yakin hapus data?')" href="controller/delete_eo.php?id=<?= $id;?>" class="btn btn-primary"><i class="fa fa-trash"></i></a>
+                        <a href="form_edit_eo.php?id=<?= $id;?>" class="btn btn-primary"><i class="fa fa-edit"></i> Edit</a>
+                        <a onclick="return confirm('Apakah anda yakin hapus data?')" href="controller/delete_eo.php?id=<?= $id;?>" class="btn btn-danger"><i class="fa fa-trash"></i> Delete</a>
                     </td>
                    
                   </tr>

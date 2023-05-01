@@ -39,33 +39,33 @@ foreach($select as $as){
           <div class="col">
             <!-- general form elements -->
             <div class="card card-primary">
-              <div class="card-header">
-                <h3 class="card-title">Form Edit EO</h3>
-              </div>
               <!-- /.card-header -->
               <!-- form start -->
               <form method="post" action="controller/update_eo.php">
                 <div class="card-body">
-                 <div class="form-group">
-                    <label for="exampleInputEmail1">Nama Lengkap</label>
-                    <input type="text" name="nama" style="width:200px" class="form-control" id="exampleInputEmail1" placeholder="Nama Lengkap" value="<?= $nama;?>">
+                <div class="row">
+                  <div class="col-sm">
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Nama Lengkap</label>
+                      <input type="text" name="nama" class="form-control" id="exampleInputEmail1" placeholder="Nama Lengkap" value="<?= $nama;?>">
+                      </br>
+                      <label for="exampleInputEmail1">Email</label>
+                      <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="email" value="<?= $email;?>">
+                    </div>
                   </div>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Email</label>
-                    <input type="email" name="email" style="width:200px" class="form-control" id="exampleInputEmail1" placeholder="email" value="<?= $email;?>">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">No HP</label>
-                    <input type="number" name="hp" style="width:200px" class="form-control" id="exampleInputEmail1" placeholder="No HP" value="<?= $hp;?>">
-                  </div>
-                  
-                  <input type="hidden" name="id" style="width:200px" class="form-control" id="exampleInputEmail1" placeholder="No HP" value="<?= $id_eo;?>">
+                  <div class="col-sm">
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">No HP</label>
+                      <input type="number" name="hp" class="form-control" id="exampleInputEmail1" placeholder="No HP" value="<?= $hp;?>">
 
+                      <input type="hidden" name="id" class="form-control" id="exampleInputEmail1" placeholder="No HP" value="<?= $id_eo;?>">
+                    </div>
+                  </div>
                 </div>
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary btn-block">Submit</button>
                 </div>
               </form>
             </div>

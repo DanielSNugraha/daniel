@@ -28,32 +28,35 @@ include("header.php");
           <div class="col">
             <!-- general form elements -->
             <div class="card card-primary">
-              <div class="card-header">
-                <h3 class="card-title">Form Input MALL</h3>
-              </div>
+              <!-- <div class="card-header">
+                <h3 class="card-title"></h3>
+              </div> -->
               <!-- /.card-header -->
               <!-- form start -->
               <form method="post" action="controller/insert_mall.php" enctype="multipart/form-data">
                 <div class="card-body">
-                 <div class="form-group">
-                    <label for="exampleInputEmail1">Nama Mall</label>
-                    <input type="text" name="nama" class="form-control" id="exampleInputEmail1" style="width:300px" placeholder="Nama Mall">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Alamat Mall</label>
-                    <textarea type="text" name="alamat" class="form-control" id="exampleInputEmail1" style="width:300px" placeholder="Alamar Lengkap"></textarea>
-                  </div>
-
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Peta Kios</label>
-                    <input type="file" style="width:300px" name="map" class="form-control" id="exampleInputEmail1" placeholder="Peta Kios">
-                  </div>
-                  
+                  <div class="row">
+                    <div class="col-sm">
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Nama Mall</label>
+                        <input type="text" name="nama" class="form-control" id="exampleInputEmail1" placeholder="Nama Mall">
+                        </br>
+                        <label for="exampleInputEmail1">Peta Kios</label>
+                        <input type="file" name="map" class="form-control" id="exampleInputEmail1" placeholder="Peta Kios">
+                      </div>
+                    </div>
+                    <div class="col-sm">
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Alamat Mall</label>
+                        <textarea rows="5" type="text" name="alamat" class="form-control" id="exampleInputEmail1" placeholder="Alamar Lengkap"></textarea>
+                      </div>
+                    </div>
+                  </div>              
                 </div>
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary btn-block">Submit</button>
                 </div>
               </form>
             </div>
